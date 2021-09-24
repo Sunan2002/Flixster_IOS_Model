@@ -7,14 +7,17 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var movies = [[String:Any]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -57,9 +60,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.textLabel!.text = title
         
         return cell
-        
     }
-//next will work on cells
     
 
 }
+
