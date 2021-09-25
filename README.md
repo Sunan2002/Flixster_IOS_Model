@@ -21,9 +21,8 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF
-//My simulation was uninterruptedly being terminated even though it built successfully mutliple times. I did not get any errors prior to runtime in my code or dispalys. This is what was displayed prior to my simulation terminating. Please take a look at my code, I have made multiple attempts to fix this issue but could not figure out as to why. Sorry for all the difficulties I am causing you all, I know I am asking a lot. Any feedback on what error I am getting would be greatly appreciated.
-![](https://i.imgur.com/39EjzDv.gif)
+
+<img src="https://recordit.co/L6q6gG5Muu" width=250><br>
 
 ### Notes
 Describe any challenges encountered while building the app.
-I had some difficulty running the simulation. I cannot run a full simulation even though the build is successful and I got no errors in my code prior to running the simulaation. 
