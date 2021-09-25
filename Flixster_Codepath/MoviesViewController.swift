@@ -8,7 +8,7 @@
 import UIKit
 import AlamofireImage
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     
@@ -30,8 +30,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
              if let error = error {
                     print(error.localizedDescription)
              } else if let data = data {
-                _ = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                self.movies = dataDictionary["results"] as! [[String:Any]]
+                self.tableView.reloadData()
+                print(dataDictionary)
                     // TODO: Get the array of movies
                     // TODO: Store the movies in a property to use elsewhere
                     // TODO: Reload your table view data
@@ -47,6 +49,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
     
         let movie = movies[indexPath.row]
