@@ -30,7 +30,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
              if let error = error {
                     print(error.localizedDescription)
              } else if let data = data {
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                _ = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
 
                     // TODO: Get the array of movies
                     // TODO: Store the movies in a property to use elsewhere
